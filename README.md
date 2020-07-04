@@ -11,12 +11,23 @@
     └── screenshot
 ```
 
-### PHP란?
+### 🔍 PHP란?
 
 C언어를 기반으로 만들어진 서버 측에서 실행되는 서버 사이드 스크립트 언어입니다.
 동적 웹 페이지를 쉽고 빠르게 만들 수 있도록 해주는 데 목적이 있습니다.
 
 php로 작성된 코드를 html 코드 안에 추가하면, 웹 서버는 해당 php 코드를 해석하여 동적 웹 페이지를 생성합니다.
+
+## 📝 기본 학습 내용
+
+* [텍스트와 숫자](./Basic/TxtAndNum.md)
+* [변수](./Basic/Variable.md)
+* [조건문과 반복문](./Basic/Statement.md)
+* [배열](./Basic/Array.md)
+* [함수](./Basic/Function.md)
+* [클래스](./Basic/Class.md)
+* [include와 namespace](./Basic/IncludeAndNamespace.md)
+* [정규표현식](./Basic/RegularExpression.md)
 
 #### 참고
 
