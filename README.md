@@ -6,8 +6,9 @@
 
 ```zsh
     .
-    ├── Basic       --- php 기본 문법 학습
-    ├── DynamicWeb  --- php를 활용한 간단한 웹 실습
+    ├── Basic          --- php 기본 문법 학습
+    ├── DynamicWeb     --- php를 활용한 간단한 웹 실습
+    ├── Laravel-Study  --- Laravel 프레임워크 활용 실습
     └── screenshot
 ```
 
