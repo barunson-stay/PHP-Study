@@ -35,6 +35,12 @@ Route::get('auth/logout', function(){
     return '또 봐요~';
 });
 
+/*
+Event::listen('article.created', function ($article){
+    var_dump('이벤트를 받았습니다. 받은 데이터(상태)는 다음과 같습니다.');
+    var_dump($article->toArray());
+});
+*/
 Route::resource('articles', 'ArticlesController');
 
 // 내장 인증
