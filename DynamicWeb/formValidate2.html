@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<form method="post" action="formValidate2.php">
+<p class="alert">* : 필수 입력 사항</p><br>
+이름 : <input type="text" name="name"><span class="alert"> * <?php echo $nameMsg ?></span><br>
+성별 :
+<input type="radio" name="gender" value="female">여자
+<input type="radio" name="gender" value="male">남자 <span class="alert"> * <?php echo $genderMsg ?></span><br>
+이메일 : <input type="text" name="email"><br>
+홈페이지 : <input type="text" name="website"><br>
+관심 있는 분야 :
+<input type="checkbox" name="favtopic[]" value="movie"> 영화
+<input type="checkbox" name="favtopic[]" value="music"> 음악
+<input type="checkbox" name="favtopic[]" value="game"> 게임
+<input type="checkbox" name="favtopic[]" value="coding"> 코딩
+<span class="alert"> * <?php echo $favtopicMsg ?></span><br>
+기타 : <textarea name="comment"></textarea><br>
+<input type="submit" value="전송">
+</form>
+</body>
+</html>
