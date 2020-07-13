@@ -65,15 +65,15 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            @if (Route::has('sessions.create'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('sessions.create') }}">로그인</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                        @if (Route::has('users.create'))
+                            <a href="{{ route('users.create') }}">회원가입</a>
                         @endif
                     @endauth
                 </div>
