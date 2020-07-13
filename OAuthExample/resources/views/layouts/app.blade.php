@@ -20,15 +20,16 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        @include('layouts.partials.navigation')
+    <div class="flex-center position-ref full-height">
+        <div class="container">
+            @include('layouts.partials.navigation')
 
-        <main class="py-4">
-            @include('flash::message')
-            @yield('content')
-        </main>
-
-        @include('layouts.partials.footer')
+            <div class="content" style="margin: 5%">
+                @include('flash::message')
+                @yield('content')
+            </div>
+            @include('layouts.partials.footer')
+        </div>
     </div>
 </body>
 </html>
