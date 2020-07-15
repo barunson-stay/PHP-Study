@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
+use Laravel\Socialite\SocialiteManager;
 
 class SocialController extends Controller
 {
@@ -51,17 +52,20 @@ class SocialController extends Controller
     protected function handleProviderCallback($provider)
     {
         $user = Socialite::driver($provider)->user();
+        $token = $user->token;
 
         $user = (\App\User::whereEmail($user->getEmail())->first())
             ?: \App\User::create([
                 'name'  => $user->getName() ?: 'unknown',
                 'email' => $user->getEmail(),
+                'confirm_code' => $token,
+                //'confirm_code' => base64_encode($token),
                 'activated' => 1,
             ]);
 
         auth()->login($user);
         flash(
-            trans('auth.sessions.info_welcome', ['name' => auth()->user()->name])
+            auth()->user()->name
         );
 
         return redirect(route('home'));
