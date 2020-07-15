@@ -1,5 +1,16 @@
 <?php
 
+/* social login */
+Route::get('social/{provider}',[
+    'as'=>'social.login',
+    'uses' => 'SocialController@execute',
+]);
+
+Route::get('auth/logout', [
+    'as' => 'sessions.destroy',
+    'uses' => 'SessionsController@destroy',
+]);
+
 Route::get('auth/login', [
     'as' => 'sessions.create',
     'uses' => 'SessionsController@create',

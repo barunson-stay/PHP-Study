@@ -37,4 +37,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'activated' => 'boolean',
     ];
+
+    public function scopeSocialUser($query, $email)
+    {
+        return $query->whereEmail($email)->whereNull('password');
+    }
 }
