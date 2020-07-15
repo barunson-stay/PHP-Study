@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('welcome') }}
+                    {{ auth()->user()->name }} 님 환영합니다.
                 </div>
             </div>
         </div>
