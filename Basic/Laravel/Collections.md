@@ -16,3 +16,6 @@
 
 * toArray(): converts the model/collection into a simple PHP array.
 
+
+> 참고
+> - [Laravel Document](https://laravel.com/docs/5.5/collections#available-methods)
